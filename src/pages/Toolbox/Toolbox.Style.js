@@ -5,13 +5,13 @@ export const ToolboxContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  padding: 0 20px;s
 `;
 export const ToolboxContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  padding: 0 20px;
 
   & > .ant-card {
     max-width: 800px;

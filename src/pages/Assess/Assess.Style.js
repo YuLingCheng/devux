@@ -5,9 +5,10 @@ import { ButtonLink } from '../../components/Styleguide';
 export const AssessContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px;
-  justify-content: center;
+  min-height: calc(100vh - 70px);
   align-items: center;
+  padding: 40px;
+
   & > .ant-card { max-width: 900px; }
 
   & > :not(:last-child) {

@@ -50,7 +50,7 @@ class About extends Component {
           <Cup cupSize="305" sizeUnit="px" x="30px" y="40px" style={{opacity: 0.5}}>
             <Cup.Handle cupSize="305" sizeUnit="px" />
           </Cup>
-          <Pencil.Shadow style={{opacity: 0.5}} top="-70vh" rotate="-200"><Pencil /></Pencil.Shadow>
+          <Pencil.Shadow style={{opacity: 0.5}} top="-70vh" left="85vw" rotate="-200"><Pencil /></Pencil.Shadow>
         </Background>
       </Fragment>
     );

@@ -5,10 +5,9 @@ import { ButtonLink } from '../../components/Styleguide';
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px;
-  min-height: 90vh;
-  justify-content: center;
+  min-height: calc(100vh - 70px);
   align-items: center;
+  padding: 40px;
 
   & > .ant-card { max-width: 800px; }
 

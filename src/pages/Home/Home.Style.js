@@ -5,9 +5,10 @@ import { ButtonLink } from '../../components/Styleguide';
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  min-height: calc(100vh - 70px);
   justify-content: center;
   align-items: center;
+  padding: 0 40px 40px;
 
   & > :not(:last-child) {
     margin-bottom: 40px;

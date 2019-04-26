@@ -12,6 +12,10 @@ export const H1 = styled.h1`
   margin-top: 0;
   margin-bottom: 1rem;
   font-family: ${props => props.theme.typography.fontFamily};
+
+  @media screen and (max-width: 425px) {
+    font-size: 1rem;
+  }
 `;
 
 export const H2 = styled.h2`
@@ -20,6 +24,10 @@ export const H2 = styled.h2`
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-family: ${props => props.theme.typography.fontFamily};
+
+  @media screen and (max-width: 425px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const H3 = styled.h3`
@@ -35,6 +43,10 @@ export const P = styled.p`
   margin-top: 0.5rem;
   font-size: 1rem;
   font-family: ${props => props.theme.typography.fontFamily};
+
+  @media screen and (max-width: 425px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const Explanations = styled.article`

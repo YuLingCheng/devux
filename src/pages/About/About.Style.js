@@ -1,8 +1,6 @@
-import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 
-import { P, ButtonLink } from '../../components/Styleguide';
-import BackgroundBase from '../../assets/decorations/BackgroundBase';
+import { ButtonLink } from '../../components/Styleguide';
 
 export const AboutContainer = styled.div`
   display: flex;
@@ -16,22 +14,6 @@ export const AboutContainer = styled.div`
 
   & > :not(:last-child) {
     margin-bottom: 40px;
-  }
-`;
-
-export const Background = styled(BackgroundBase)`
-  border-top: 100vh solid ${props => props.theme.colors.mainBackground};
-  border-left: 0 solid transparent;
-  border-right: 10vw solid transparent;
-  height: 0;
-  width: 55vw;
-  min-width: 30rem;
-
-  @media screen and (max-width: 425px) {
-    border: none;
-    width: 100%;
-    height: 100%;
-    background-color: ${props => props.theme.colors.mainBackground};
   }
 `;
 

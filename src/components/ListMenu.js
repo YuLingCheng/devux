@@ -8,11 +8,15 @@ const Menu = styled.nav`
   font-weight: 900;
 
   &  > :not(:last-child) {
-    margin-right: 40px;
+    margin-right: 2.5rem;
   }
 
   @media screen and (max-width: 425px) {
-    padding: 0 2rem;
+    padding: 0 1rem;
+
+    &  > :not(:last-child) {
+      margin-right: 1.5rem;
+    }
   }
 `
 const MenuLink = styled(A)`

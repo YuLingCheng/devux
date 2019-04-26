@@ -1,8 +1,4 @@
-import React from 'react';
-import styled, { withTheme } from 'styled-components';
-
-import { P, ButtonLink } from '../../components/Styleguide';
-import BackgroundBase from '../../assets/decorations/BackgroundBase';
+import styled from 'styled-components';
 
 export const ToolboxContainer = styled.div`
   background-color: ${props => props.theme.colors.blue_transparent};

@@ -1,7 +1,6 @@
 import { createBrowserHistory } from "history";
 import React, { Component, Fragment } from "react";
 import ReactGA from 'react-ga';
-import { Redirect } from "react-router";
 import { Router, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 

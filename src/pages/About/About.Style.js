@@ -2,20 +2,6 @@ import styled from 'styled-components';
 
 import { ButtonLink } from '../../components/Styleguide';
 
-export const AboutContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 70px);
-  align-items: center;
-  padding: 40px;
-
-  & > .ant-card { max-width: 800px; }
-
-  & > :not(:last-child) {
-    margin-bottom: 40px;
-  }
-`;
-
 export const Profile = styled.img`
   border-radius: 50%;
   border: 4px solid white;

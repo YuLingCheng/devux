@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 import { ButtonLink } from '../../components/Styleguide';
 
-export const HomeContainer = styled.div`
+export const HomeContent = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 70px);
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 70px);
   padding: 0 40px 40px;
 
   & > :not(:last-child) {

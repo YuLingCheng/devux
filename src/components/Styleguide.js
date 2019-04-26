@@ -69,6 +69,7 @@ export const A = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.colors.grey_dark};
   &:hover {
+    color: ${props => props.theme.colors.primary};
     text-decoration: underline;
   }
 `;
@@ -86,6 +87,7 @@ export const ButtonLink = styled(A)`
   &:hover {
     background-color: ${props => props.theme.colors.primary_dark};
     text-decoration: none;
+    color: ${props => props.theme.colors.grey_dark};
   }
 `;
 
@@ -95,23 +97,38 @@ export const Ul = styled.ul`
 `;
 
 export const Background = styled(BackgroundBase)`
-  border-top: 100vh solid ${props => props.theme.colors.mainBackground};
+  border-top: 90vh solid ${props => props.theme.colors.mainBackground};
   border-left: 0 solid transparent;
-  border-right: 10vw solid transparent;
-  height: 0;
-  width: 55vw;
+  border-right: 100vw solid transparent;
 
   @media screen and (max-width: 425px) {
-    border: none;
-    width: 100%;
-    height: 100%;
-    background-color: ${props => props.theme.colors.mainBackground};
-
     ${Cup} {
       display: none;
     }
     ${Pencil} {
       display: none;
     }
+    ${Pencil.Shadow} {
+      display: none;
+    }
+  }
+`;
+
+export const PageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+`;
+export const PageContent = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 70px);
+  padding: 40px;
+
+  & > .ant-card { max-width: 800px; }
+
+  & > :not(:last-child) {
+    margin-bottom: 40px;
   }
 `;

@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import { Anchor, BackTop, Card } from 'antd';
 
 import {
-  ToolboxContainer,
   ToolboxContent,
   SlideContent,
   Handoff,
 } from './Toolbox.Style';
 import Header from '../../components/Header';
-import { H1, H2, ExternalLink } from '../../components/Styleguide';
+import { Background, H1, H2, ExternalLink, PageContainer } from '../../components/Styleguide';
 
+import Cup from '../../assets/decorations/Cup';
+import Pencil from '../../assets/decorations/Pencil';
 import slide1 from '../../assets/images/slide1.png';
 import slide2 from '../../assets/images/slide2.png';
 import slide4 from '../../assets/images/slide4.png';
@@ -37,7 +38,7 @@ const Slide = ({id, title, images}) => (
 class Toolbox extends Component {
   render() {
     return (
-      <ToolboxContainer>
+      <PageContainer>
         <Header />
         <ToolboxContent id="scrollable-content">
           <BackTop target={() => document.getElementById('root')} visibilityHeight={0} />
@@ -123,7 +124,13 @@ class Toolbox extends Component {
             ]}
           />
         </ToolboxContent>
-      </ToolboxContainer>
+        <Background>
+          <Cup cupSize="305" sizeUnit="px" x="30px" y="40px">
+            <Cup.Handle cupSize="305" sizeUnit="px" />
+          </Cup>
+          <Pencil.Shadow top="-70vh" left="85vw" rotate="-200"><Pencil /></Pencil.Shadow>
+        </Background>
+      </PageContainer>
     );
   }
 };

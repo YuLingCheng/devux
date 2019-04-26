@@ -1,14 +1,13 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Card } from 'antd';
 
 import {
-  AssessContainer,
   LevelsContainer,
   LevelContainer,
   CTA
 } from './Assess.Style';
 import Header from '../../components/Header';
-import { H1, H2, Background } from '../../components/Styleguide';
+import { H1, H2, Background, PageContainer, PageContent } from '../../components/Styleguide';
 
 import Cup from '../../assets/decorations/Cup';
 import Pencil from '../../assets/decorations/Pencil';
@@ -16,9 +15,9 @@ import Pencil from '../../assets/decorations/Pencil';
 class Assess extends Component {
   render() {
     return (
-      <Fragment>
+      <PageContainer>
         <Header />
-        <AssessContainer>
+        <PageContent>
           <Card>
             <H1>Define where you are standing now and where you want to go</H1>
             <LevelsContainer>
@@ -49,14 +48,14 @@ class Assess extends Component {
             </LevelsContainer>
             <CTA style={{margin: 'auto'}} to="toolbox">Start improving your collaboration</CTA>
           </Card>
-        </AssessContainer>
+        </PageContent>
         <Background>
-          <Cup cupSize="305" sizeUnit="px" x="30px" y="40px" style={{opacity: 0.5}}>
+          <Cup cupSize="305" sizeUnit="px" x="30px" y="40px">
             <Cup.Handle cupSize="305" sizeUnit="px" />
           </Cup>
-          <Pencil.Shadow style={{opacity: 0.5}} top="-70vh" left="85vw" rotate="-200"><Pencil /></Pencil.Shadow>
+          <Pencil.Shadow top="-70vh" left="85vw" rotate="-200"><Pencil /></Pencil.Shadow>
         </Background>
-      </Fragment>
+      </PageContainer>
     );
   }
 };

@@ -1,12 +1,12 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Card, Divider } from 'antd';
 
 import {
-  HomeContainer,
+  HomeContent,
   CTA,
 } from './Home.Style';
 import Header from '../../components/Header';
-import { Background, H1, H2 } from '../../components/Styleguide';
+import { Background, H1, H2, PageContainer } from '../../components/Styleguide';
 
 import Cup from '../../assets/decorations/Cup';
 import Pencil from '../../assets/decorations/Pencil';
@@ -14,9 +14,9 @@ import Pencil from '../../assets/decorations/Pencil';
 class Home extends Component {
   render() {
     return (
-      <Fragment>
+      <PageContainer>
         <Header />
-        <HomeContainer>
+        <HomeContent>
           <Card>
             <H1>Spark the DevUx culture</H1>
             <Card>
@@ -27,14 +27,14 @@ class Home extends Component {
               <CTA to="toolbox">Toolbox</CTA>
             </Card>
           </Card>
-        </HomeContainer>
+        </HomeContent>
         <Background>
-          <Cup cupSize="305" sizeUnit="px" x="30px" y="40px" style={{opacity: 0.5}}>
+          <Cup cupSize="305" sizeUnit="px" x="30px" y="40px">
             <Cup.Handle cupSize="305" sizeUnit="px" />
           </Cup>
-          <Pencil.Shadow style={{opacity: 0.5}} top="-70vh" left="85vw" rotate="-200"><Pencil /></Pencil.Shadow>
+          <Pencil.Shadow top="-70vh" left="85vw" rotate="-200"><Pencil /></Pencil.Shadow>
         </Background>
-      </Fragment>
+      </PageContainer>
     );
   }
 };

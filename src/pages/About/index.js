@@ -1,14 +1,13 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Card, Icon } from 'antd';
 
 import {
-  AboutContainer,
   Profile,
   Contact,
   CTA,
 } from './About.Style';
 import Header from '../../components/Header';
-import { Background, ExternalLink, H1, P } from '../../components/Styleguide';
+import { Background, ExternalLink, H1, P, PageContainer, PageContent } from '../../components/Styleguide';
 
 import Cup from '../../assets/decorations/Cup';
 import Pencil from '../../assets/decorations/Pencil';
@@ -18,9 +17,9 @@ import yuling from '../../assets/images/yuling_cheng.png';
 class About extends Component {
   render() {
     return (
-      <Fragment>
+      <PageContainer>
         <Header />
-        <AboutContainer>
+        <PageContent>
           <Card>
           <H1>Why spark the DevUx culture?</H1>
           <P>Front-end development has gotten trickier over the years.
@@ -45,14 +44,14 @@ class About extends Component {
             </Contact.Text>
           </Contact>
           </Card>
-        </AboutContainer>
+        </PageContent>
         <Background>
-          <Cup cupSize="305" sizeUnit="px" x="30px" y="40px" style={{opacity: 0.5}}>
+          <Cup cupSize="305" sizeUnit="px" x="30px" y="40px">
             <Cup.Handle cupSize="305" sizeUnit="px" />
           </Cup>
-          <Pencil.Shadow style={{opacity: 0.5}} top="-70vh" left="85vw" rotate="-200"><Pencil /></Pencil.Shadow>
+          <Pencil.Shadow top="-70vh" left="85vw" rotate="-200"><Pencil /></Pencil.Shadow>
         </Background>
-      </Fragment>
+      </PageContainer>
     );
   }
 };

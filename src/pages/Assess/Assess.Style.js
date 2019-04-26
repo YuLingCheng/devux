@@ -2,20 +2,6 @@ import styled from 'styled-components';
 
 import { ButtonLink } from '../../components/Styleguide';
 
-export const AssessContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 70px);
-  align-items: center;
-  padding: 40px;
-
-  & > .ant-card { max-width: 900px; }
-
-  & > :not(:last-child) {
-    margin-bottom: 40px;
-  }
-`;
-
 export const LevelsContainer = styled.div`
   display: flex;
   justify-content: space-evenly;

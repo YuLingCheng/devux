@@ -1,17 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Divider, Row, Col } from 'antd';
+import { Card, Divider } from 'antd';
 
 import {
   HomeContainer,
-  Background,
-  Description,
-  HeadSection,
   CTA,
-  Section,
-  Column,
 } from './Home.Style';
 import Header from '../../components/Header';
-import { A, H1, H2, P } from '../../components/Styleguide';
+import { Background, H1, H2 } from '../../components/Styleguide';
 
 import Cup from '../../assets/decorations/Cup';
 import Pencil from '../../assets/decorations/Pencil';

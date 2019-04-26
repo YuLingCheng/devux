@@ -1,19 +1,14 @@
-import React, { Component, Fragment } from 'react';
-import { Anchor, BackTop, Card, Divider, Row, Col } from 'antd';
+import React, { Component } from 'react';
+import { Anchor, BackTop, Card } from 'antd';
 
 import {
   ToolboxContainer,
   ToolboxContent,
-  Background,
-  CTA,
   SlideContent,
   Handoff,
 } from './Toolbox.Style';
 import Header from '../../components/Header';
-import { A, H1, H2, P, ExternalLink } from '../../components/Styleguide';
-
-import Cup from '../../assets/decorations/Cup';
-import Pencil from '../../assets/decorations/Pencil';
+import { H1, H2, ExternalLink } from '../../components/Styleguide';
 
 import slide1 from '../../assets/images/slide1.png';
 import slide2 from '../../assets/images/slide2.png';

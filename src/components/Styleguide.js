@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import BackgroundBase from '../assets/decorations/BackgroundBase';
+import Cup from '../assets/decorations/Cup';
+import Pencil from '../assets/decorations/Pencil';
+
 export const H1 = styled.h1`
   font-weight: 700;
   font-size: 2rem;
@@ -76,4 +80,26 @@ export const ButtonLink = styled(A)`
 export const Ul = styled.ul`
   margin: 0;
   padding-inline-start: 1.25rem;
+`;
+
+export const Background = styled(BackgroundBase)`
+  border-top: 100vh solid ${props => props.theme.colors.mainBackground};
+  border-left: 0 solid transparent;
+  border-right: 10vw solid transparent;
+  height: 0;
+  width: 55vw;
+
+  @media screen and (max-width: 425px) {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: ${props => props.theme.colors.mainBackground};
+
+    ${Cup} {
+      display: none;
+    }
+    ${Pencil} {
+      display: none;
+    }
+  }
 `;

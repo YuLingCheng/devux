@@ -1,15 +1,14 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Col, Row, Icon } from 'antd';
+import { Card, Icon } from 'antd';
 
 import {
   AboutContainer,
-  Background,
   Profile,
   Contact,
   CTA,
 } from './About.Style';
 import Header from '../../components/Header';
-import { ExternalLink, H1, H2, P } from '../../components/Styleguide';
+import { Background, ExternalLink, H1, P } from '../../components/Styleguide';
 
 import Cup from '../../assets/decorations/Cup';
 import Pencil from '../../assets/decorations/Pencil';

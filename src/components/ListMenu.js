@@ -7,24 +7,25 @@ const Menu = styled.nav`
   padding: 0;
   font-weight: 900;
 
-  & :not(:last-child) {
+  &  > :not(:last-child) {
     margin-right: 40px;
   }
+
+  @media screen and (max-width: 425px) {
+    padding: 0 2rem;
+  }
 `
-const Link = styled(A)`
+const MenuLink = styled(A)`
   text-transform: uppercase;
   font-size: 0.75rem;
 `;
-const MenuItem = (props) => (
-  <Link to={props.to}>{props.children}</Link>
-);
 
 const ListMenu = () => (
   <Menu>
-    <MenuItem to="/">Home</MenuItem>
-    <MenuItem to="/about">About</MenuItem>
-    <MenuItem to="/assess">Assess</MenuItem>
-    <MenuItem to="/toolbox">Toolbox</MenuItem>
+    <MenuLink to="/">Home</MenuLink>
+    <MenuLink to="/about">About</MenuLink>
+    <MenuLink to="/assess">Assess</MenuLink>
+    <MenuLink to="/toolbox">Toolbox</MenuLink>
   </Menu>
 );
 

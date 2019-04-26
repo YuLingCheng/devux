@@ -5,9 +5,20 @@ import ListMenu from './ListMenu';
 import Cup from '../assets/decorations/Cup';
 
 const HeaderContainer = styled.header`
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 70px;
+
+  @media screen and (max-width: 425px) {
+    padding: 0;
+    justify-content: center;
+    
+    ${Cup} {
+      display: none;
+    }
+  }
 `
 
 class Header extends Component {

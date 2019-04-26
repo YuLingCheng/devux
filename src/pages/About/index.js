@@ -30,7 +30,7 @@ class About extends Component {
           <P>Yet, we still work the old way: Product defines features, designers make mock-ups, then developers integrate them.
             <br/>Side effects include: blocking dependencies, rework, misunderstanding, frustration, for everyone involved.
           </P>
-          <P>As lead designer (France Wang) and developer (Yu Ling Cheng), we’ve experimented to increase productivity and reduce frustration on both sides.
+          <P>As lead designer (France Wang) and lead developer (Yu Ling Cheng), we’ve experimented to increase productivity and reduce frustration on both sides.
             <br/>We've minimized back and forth on design integration by creating a DevUX culture in our companies and we want to share it.</P>
           <Contact>
             <Contact.Pictures>

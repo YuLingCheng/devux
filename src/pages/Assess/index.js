@@ -7,10 +7,17 @@ import {
   CTA
 } from './Assess.Style';
 import Header from '../../components/Header';
+import Slide from '../../components/Slide';
 import { H1, H2, Background, PageContainer, PageContent } from '../../components/Styleguide';
 
 import Cup from '../../assets/decorations/Cup';
 import Pencil from '../../assets/decorations/Pencil';
+import level0 from '../../assets/images/level0.png';
+import level1 from '../../assets/images/level1.png';
+import level1pb from '../../assets/images/level1pb.png';
+import level2 from '../../assets/images/level2.png';
+import level2pb from '../../assets/images/level2pb.png';
+import level3 from '../../assets/images/level3.png';
 
 class Assess extends Component {
   render() {
@@ -48,6 +55,17 @@ class Assess extends Component {
             </LevelsContainer>
             <CTA style={{margin: 'auto'}} to="toolbox">Start improving your collaboration</CTA>
           </Card>
+          <Slide
+            title="Levels recap and the problems for each"
+            images={[
+              {seq: 1, src: level0},
+              {seq: 2, src: level1},
+              {seq: 3, src: level1pb},
+              {seq: 4, src: level2},
+              {seq: 5, src: level2pb},
+              {seq: 6, src: level3},
+            ]}
+          />
         </PageContent>
         <Background>
           <Cup cupSize="305" sizeUnit="px" x="30px" y="40px">

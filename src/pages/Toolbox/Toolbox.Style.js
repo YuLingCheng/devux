@@ -17,19 +17,6 @@ export const ToolboxContent = styled.div`
   }
 `;
 
-export const SlideContent = styled.div`
-  &:not(:last-of-type) { margin-bottom: 40px; }
-  text-align: center;
-`;
-
-SlideContent.Img = styled.img`
-  width: 100%;
-  height: auto;
-`;
-SlideContent.P = styled.p`
-  margin-top: 10px;
-`;
-
 export const Handoff = styled.div`
   display: flex;
   align-items: center;

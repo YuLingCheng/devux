@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Anchor, BackTop, Card } from 'antd';
+import { Anchor, Card } from 'antd';
 
 import {
   ToolboxContent,
-  SlideContent,
   Handoff,
 } from './Toolbox.Style';
 import Header from '../../components/Header';
+import Slide, { SlideContent } from '../../components/Slide';
 import { Background, H1, H2, ExternalLink, PageContainer } from '../../components/Styleguide';
 
 import Cup from '../../assets/decorations/Cup';
@@ -23,25 +23,12 @@ import zeplin from '../../assets/images/zeplin.png';
 import invision from '../../assets/images/invision.png';
 import other_handoff from '../../assets/images/other_handoff.png';
 
-const Slide = ({id, title, images}) => (
-  <Card id={id} style={{textAlign: 'center'}}>
-    <H2>{title} </H2>
-    {images.map(({seq, src, alt, caption}) => (
-      <SlideContent key={seq}>
-      <SlideContent.Img src={src} alt={alt} />
-      {caption && <SlideContent.P>{caption}</SlideContent.P>}
-      </SlideContent>
-    ))}
-  </Card>
-);
-
 class Toolbox extends Component {
   render() {
     return (
       <PageContainer>
         <Header />
         <ToolboxContent id="scrollable-content">
-          <BackTop target={() => document.getElementById('root')} visibilityHeight={0} />
           <Card>
             <H1>Toolbox</H1>
             <Anchor affix={false} offsetTop="-30px">

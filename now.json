@@ -4,11 +4,17 @@
   "alias": ["devux"],
   "regions": ["bru1"],
   "builds": [
-    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" } }
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
   ],
-  "routes": [
-    {"src": "^/static/(.*)", "dest": "/static/$1"},
-    {"src": "/favicon.png", "dest": "/favicon.ico"},
-    {"src": ".*", "dest": "/index.html"}
-  ]
+  "build": {
+    "env": {
+      "SPACE_ID": "@contentful-space-id",
+      "ACCESS_TOKEN": "@contentful-delivery-access-token",
+      "ANALYTICS_ID": "@google-analytics-id"
+    }
+  }
 }

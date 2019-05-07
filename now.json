@@ -9,5 +9,12 @@
       "use": "@now/static-build",
       "config": { "distDir": "public" }
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "SPACE_ID": "@contentful-space-id",
+      "ACCESS_TOKEN": "@contentful-delivery-access-token",
+      "ANALYTICS_ID": "@google-analytics-id"
+    }
+  }
 }

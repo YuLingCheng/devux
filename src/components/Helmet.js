@@ -29,8 +29,8 @@ const Helmet = ({ theme = {} }) => (
       }
     `}
     render={data => {
-      const { name, description, profile } = data.contentfulAbout;
-      const title = `DevUx | ${name}`;
+      const { description, profile } = data.contentfulAbout;
+      const title = `DevUx`;
 
       return (
         <ReactHelmet>
@@ -85,6 +85,7 @@ const Helmet = ({ theme = {} }) => (
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossOrigin="anonymous"
           />
+          <html lang="en" />
         </ReactHelmet>
       );
     }}

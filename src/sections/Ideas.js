@@ -56,7 +56,7 @@ const Ideas = () => (
                 internalLink
                 illustration {
                   title
-                  image: resize(width: 450, quality: 100) {
+                  image: resize(width: 350, quality: 100) {
                     src
                   }
                 }
@@ -105,7 +105,11 @@ const Ideas = () => (
                         mt={[5, 5, 0]}
                         textAlign="center"
                       >
-                        <Image width={150} src={rest.illustration.image.src} />
+                        <Image
+                          width={350}
+                          src={rest.illustration.image.src}
+                          alt={rest.illustration.title}
+                        />
                       </Text>
                     </Flex>
                   </Fade>

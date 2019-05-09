@@ -43,7 +43,7 @@ const Footer = () => (
                 </Box>
                 {socialLinks.map(({ id, ...rest }) => (
                   <Box key={id} px={[1, 2, 4]}>
-                    <SocialLink {...rest} />
+                    <SocialLink negativeColor {...rest} />
                   </Box>
                 ))}
               </>

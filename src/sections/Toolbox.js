@@ -120,7 +120,7 @@ const Toolbox = () => (
                     {rest.images &&
                       rest.images.map(image => (
                         <Box key={image.id}>
-                          <Image src={image.file.url} />
+                          <Image src={image.file.url} alt={image.title} />
                           <Text as="p" textAlign="center">
                             {image.description}
                           </Text>

@@ -74,7 +74,7 @@ const About = () => (
               }
               profile {
                 title
-                image: resize(width: 450, quality: 100) {
+                image: resize(width: 300, quality: 100) {
                   src
                 }
               }
@@ -85,7 +85,7 @@ const About = () => (
                 fontAwesomeIcon
                 photo {
                   title
-                  image: resize(width: 450, quality: 100) {
+                  image: resize(width: 100, quality: 100) {
                     src
                   }
                 }

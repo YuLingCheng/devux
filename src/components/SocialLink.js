@@ -6,7 +6,10 @@ import PropTypes from 'prop-types';
 
 const IconLink = styled(Link)`
   transition: color 0.5s;
-  color: ${props => props.theme.colors.primary};
+  color: ${props =>
+    props.negativeColor
+      ? props.theme.colors.background
+      : props.theme.colors.primary};
 
   &:hover {
     color: ${props => props.theme.colors.primaryLight};
@@ -20,10 +23,15 @@ const Profile = styled.img`
   margin-right: 20px;
 `;
 
-const SocialLink = ({ fontAwesomeIcon, name, url, photo }) => (
+const SocialLink = ({ fontAwesomeIcon, name, negativeColor, url, photo }) => (
   <Flex alignItems="center">
     {photo && <Profile src={photo.image.src} alt={photo.title} />}
-    <IconLink href={url} target="_blank" rel="noopener noreferrer">
+    <IconLink
+      negativeColor={negativeColor}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <FontAwesome name={fontAwesomeIcon} />
       {name}
     </IconLink>
@@ -33,6 +41,7 @@ const SocialLink = ({ fontAwesomeIcon, name, url, photo }) => (
 SocialLink.propTypes = {
   fontAwesomeIcon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  negativeColor: PropTypes.bool,
   url: PropTypes.string.isRequired,
   photo: PropTypes.shape({
     image: PropTypes.shape({ src: PropTypes.string.isRequired }),

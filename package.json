@@ -8,8 +8,7 @@
     "develop": "cleandir ./.cache && gatsby develop -p 8009",
     "start": "yarn develop",
     "lint": "eslint ./src",
-    "setup": "node ./bin/setup.js",
-    "now-build": "yarn build"
+    "setup": "node ./bin/setup.js"
   },
   "author": "Yu Ling CHENG",
   "dependencies": {

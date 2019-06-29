@@ -31,12 +31,6 @@ SPACE_ID=xxxxx ACCESS_TOKEN=yyyyy yarn build
 
 The result will be stored inside the `public` folder, so you can upload to your webhost.
 
-To deploy with Now using the CLI, run
-
-```bash
-now -b SPACE_ID=xxx -b ACCESS_TOKEN=yyy -b ANALYTICS_ID=zzz
-```
-
 ## Adding your information 📝
 
 All the text of this starter live inside Contentful, more spefically inside the Content of `About`. In order to change it, just go to `Content` section and change the entity of About with the information you want.

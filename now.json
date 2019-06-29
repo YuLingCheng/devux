@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "DevUx",
+  "alias": ["devux"],
+  "regions": ["bru1"],
+  "routes": [
+    { "src": "/(.*)", "status": 301, "headers": { "Location": "https://devux.netlify.com/" }}
+  ]
+}

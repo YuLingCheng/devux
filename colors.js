@@ -8,7 +8,7 @@ module.exports = {
 
   secondary: '#f6b93b',
   secondaryLight: '#fadda1',
-  secondaryDark: '#fa983a',
+  secondaryDark: '#f6803b',
 
   primaryText: '#3f3a36',
   primaryTextDark: '#1f1813',

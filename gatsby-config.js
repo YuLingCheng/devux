@@ -33,6 +33,7 @@ const plugins = [
   },
   'gatsby-transformer-remark',
   'gatsby-plugin-offline',
+  'gatsby-plugin-netlify',
 ];
 
 module.exports = client.getEntries().then(entries => {

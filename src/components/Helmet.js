@@ -11,6 +11,7 @@ const Helmet = ({ theme = {} }) => (
         contentfulAbout {
           name
           description
+          metaDescription
           profile {
             favicon16: resize(width: 16) {
               src
@@ -29,14 +30,14 @@ const Helmet = ({ theme = {} }) => (
       }
     `}
     render={data => {
-      const { description, profile } = data.contentfulAbout;
+      const { description, metaDescription, profile } = data.contentfulAbout;
       const title = `DevUx`;
 
       return (
         <ReactHelmet>
           <meta charSet="utf-8" />
           <title>{title}</title>
-          <meta name="description" content={description} />
+          <meta name="description" content={metaDescription} />
           <link rel="shortcut icon" href={`https:${profile.favicon32.src}`} />
           <meta name="theme-color" content={theme.background} />
           <meta name="image" content={`https:${profile.favicon32.src}`} />

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Heading, Box } from 'rebass';
+import { Box } from 'rebass';
 import ButtonAnimated from '../components/ButtonAnimated';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
+import { Heading } from '../components/Typography';
 
 const Background = () => (
   <div>
@@ -21,7 +22,7 @@ const Background = () => (
     />
 
     <Triangle
-      color="secondaryLight"
+      color="secondary"
       height={['10vh', '20vh']}
       width={['50vw', '50vw']}
       invertX
@@ -37,11 +38,11 @@ const NotFoundPage = () => (
         <Heading color="primaryDark" fontSize={['6rem', '8rem', '10rem']}>
           404
         </Heading>
-        <Heading color="secondary" fontSize={['1rem', '2rem', '3rem']}>
+        <Heading color="primaryText" fontSize={['1rem', '2rem', '3rem']}>
           We could not find what you are looking for...
         </Heading>
         <Box mt={4}>
-          <ButtonAnimated to="/" bg="secondary">
+          <ButtonAnimated to="/" color="primaryText">
             Go back to Home page
           </ButtonAnimated>
         </Box>

@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Text, Flex, Box } from 'rebass';
+import { Flex, Box } from 'rebass';
 import Fade from 'react-reveal/Fade';
 import { StaticQuery, graphql } from 'gatsby';
 import SocialLink from './SocialLink';
+import { Text } from './Typography';
 
 const FooterContainer = styled.footer`
   padding: 1em;
-  background: ${props => props.theme.colors.primaryDark};
+  background: ${props => props.theme.colors.primaryText};
   color: ${props => props.theme.colors.background};
   display: flex;
   flex: 0 1 auto;
@@ -39,11 +40,13 @@ const Footer = () => (
             return (
               <>
                 <Box px={[1, 2, 4]}>
-                  <Text>Contact Us:</Text>
+                  <Text fontSize={[1, 1, 2]} uppercase letterSpacing="6px">
+                    Contact Us
+                  </Text>
                 </Box>
-                {socialLinks.map(({ id, ...rest }) => (
-                  <Box key={id} px={[1, 2, 4]}>
-                    <SocialLink negativeColor {...rest} />
+                {socialLinks.map(({ id, ...rest }, index) => (
+                  <Box key={id} px={[1, 2, 4]} fontSize={[1, 1, 2]}>
+                    <SocialLink ux={index % 2 === 0} negativeColor {...rest} />
                   </Box>
                 ))}
               </>

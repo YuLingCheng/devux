@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Headroom from 'react-headroom';
-import { Flex, Image, Text } from 'rebass';
+import { Flex } from 'rebass';
 import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
-import Rotate from 'react-reveal/Rotate';
+import Fade from 'react-reveal/Fade';
+import { Link } from 'gatsby';
 import AnchorLink from './AnchorLink';
 import RouteLink from './RouteLink';
-import Logo from './Logo/icon.png';
+import { Text } from './Typography';
+import HomeLogo from './Logo/HomeLogo';
 
 const capitalize = s => s && s[0].toUpperCase() + s.slice(1);
 
 const HeaderContainer = styled(Headroom)`
   .headroom--pinned {
-    background: ${props => props.theme.colors.primaryDark};
+    background: ${props => props.theme.colors.background};
   }
 
   position: absolute;
@@ -38,9 +40,9 @@ const formatLinks = allLinks =>
     { links: [] },
   );
 
-const NavLink = ({ to, children }) => (
+const NavLink = ({ currentPath, to, children }) => (
   <Text ml={[2, 3]}>
-    <RouteLink to={to} uppercase>
+    <RouteLink selected={currentPath === to} to={to} uppercase>
       {children}
     </RouteLink>
   </Text>
@@ -48,11 +50,12 @@ const NavLink = ({ to, children }) => (
 NavLink.propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  currentPath: PropTypes.string,
 };
 
-const Header = () => (
+const Header = ({ currentPath }) => (
   <HeaderContainer>
-    <Rotate top left duration={400}>
+    <Fade>
       <Flex
         flexWrap="wrap"
         justifyContent="space-between"
@@ -65,8 +68,9 @@ const Header = () => (
 
             const homeLink = (
               <>
-                <Image src={Logo} width="40px" alt="DevUx Logo" mr={3} />
-                <RouteLink to="/">DevUx</RouteLink>
+                <Link to="/" title="Home">
+                  <HomeLogo height="30px" />
+                </Link>
               </>
             );
             const navLinks = links.map(({ name, value }) => (
@@ -92,16 +96,24 @@ const Header = () => (
                   {navLinks.length === 0 && (
                     <NavLink to="/#about">About</NavLink>
                   )}
-                  <NavLink to="/manifest">Manifest</NavLink>
-                  <NavLink to="/toolbox">Toolbox</NavLink>
+                  <NavLink currentPath={currentPath} to="/manifest">
+                    Manifest
+                  </NavLink>
+                  <NavLink currentPath={currentPath} to="/toolbox">
+                    Toolbox
+                  </NavLink>
                 </Flex>
               </>
             );
           }}
         </SectionLinks>
       </Flex>
-    </Rotate>
+    </Fade>
   </HeaderContainer>
 );
+
+Header.propTypes = {
+  currentPath: PropTypes.string,
+};
 
 export default Header;

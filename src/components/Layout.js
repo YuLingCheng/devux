@@ -13,13 +13,14 @@ const GlobalStyle = createGlobalStyle`
 *::before {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
-  }
+}
 
 body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: Helvetica, sans-serif;
+  color: ${colors.primaryText};
   overflow-x: hidden;
 }
 `;

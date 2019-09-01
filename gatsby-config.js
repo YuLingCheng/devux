@@ -19,12 +19,6 @@ const plugins = [
   },
   'gatsby-plugin-styled-components',
   {
-    resolve: 'gatsby-plugin-google-fonts',
-    options: {
-      fonts: [`Noto Sans\:400,700`],
-    },
-  },
-  {
     resolve: 'gatsby-source-contentful',
     options: {
       spaceId: SPACE_ID,

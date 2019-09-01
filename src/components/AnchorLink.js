@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import LinkAnimated from './LinkAnimated';
 
 const AnchorLink = ({ onClick, selected, children, uppercase }) => (
-  <Box ml={[2, 3]} color="background" fontSize={[1, 2]}>
+  <Box ml={[2, 3]} color="primaryText" fontSize={[1, 2]}>
     <LinkAnimated
       as="a"
       uppercase={uppercase}

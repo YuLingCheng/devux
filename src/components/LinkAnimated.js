@@ -33,6 +33,10 @@ const LinkAnimated = styled(Link)`
     right: auto;
     width: 100%;
   }
+
+  &::selection {
+    background: ${props => props.theme.colors.secondary};
+  }
 `;
 
 export default LinkAnimated;

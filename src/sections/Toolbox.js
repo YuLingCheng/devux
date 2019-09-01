@@ -1,41 +1,31 @@
 import React from 'react';
-import { Box, Image, Text } from 'rebass';
+import { Box, Image } from 'rebass';
 import { StaticQuery, graphql } from 'gatsby';
-import ReactMarkdown from 'react-markdown';
 import { Card } from '../components/Card';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
 import LinkAnimated from '../components/LinkAnimated';
-import TextAnimated from '../components/TextAnimated';
 import markdownRenderer from '../components/MarkdownRenderer';
+import { Heading, Markdown, Text } from '../components/Typography';
 
 const Background = () => (
   <div>
     <Triangle
-      color="primaryDark"
-      height={['30vh', '20vh']}
-      width={['45vw', '90vw']}
-      invertX
-    />
-    <Triangle
-      color="secondaryLight"
-      height={['35vh', '50vh']}
-      width={['95vw', '15vw']}
-    />
-    <Triangle
       color="secondary"
-      height={['25vh', '20vh']}
-      width={['100vw', '70vw']}
-    />
-    <Triangle
-      color="primaryLight"
-      height={['25vh', '10vh']}
-      width={['75vw', '60vw']}
+      height={['10vh', '10vh']}
+      width={['80vw', '80vw']}
       invertX
       invertY
     />
     <Triangle
-      color="primaryDark"
+      color="primary"
+      height={['7vh', '7vh']}
+      width={['60vw', '60vw']}
+      invertX
+      invertY
+    />
+    <Triangle
+      color="primaryText"
       height={['0vh', '10vh']}
       width={['100vw', '100vw']}
       invertY
@@ -90,11 +80,19 @@ const Toolbox = () => (
 
           return (
             <>
-              <Text as="h1">
-                <TextAnimated>{pageTitle}</TextAnimated>
-              </Text>
-              <Box px={[2, 3, 4]}>
-                <ReactMarkdown
+              <Heading
+                as="h1"
+                uppercase
+                lineHeight={2}
+                fontWeight="500"
+                letterSpacing="6px"
+                mb={[2, 2, 3]}
+                fontSize={[3, 4, 5]}
+              >
+                {pageTitle}
+              </Heading>
+              <Box>
+                <Markdown
                   source={description.childMarkdownRemark.rawMarkdownBody}
                   renderers={markdownRenderer}
                 />
@@ -102,15 +100,16 @@ const Toolbox = () => (
                   <Card key={id} mb={[2, 3, 4]} id={rest.anchor} p={[2, 3, 4]}>
                     <Text
                       as="h2"
-                      fontSize={[1, 2, 3]}
+                      mb={[2, 2, 3]}
+                      lineHeight={2}
+                      fontSize={3}
                       mt={0}
-                      mb={[2, 3, 4]}
                       textAlign="center"
                     >
-                      <TextAnimated>{rest.title}</TextAnimated>
+                      {rest.title}
                     </Text>
                     {rest.description && (
-                      <ReactMarkdown
+                      <Markdown
                         source={
                           rest.description.childMarkdownRemark.rawMarkdownBody
                         }
@@ -121,9 +120,7 @@ const Toolbox = () => (
                       rest.images.map(image => (
                         <Box key={image.id}>
                           <Image src={image.file.url} alt={image.title} />
-                          <Text as="p" textAlign="center">
-                            {image.description}
-                          </Text>
+                          <Text textAlign="center">{image.description}</Text>
                         </Box>
                       ))}
                     {rest.levels.length > 0 && (

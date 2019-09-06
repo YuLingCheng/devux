@@ -40,7 +40,7 @@ const Footer = () => (
             return (
               <>
                 <Box px={[1, 2, 4]}>
-                  <Text fontSize={[1, 1, 2]} uppercase letterSpacing="6px">
+                  <Text fontSize={[1, 1, 2]} uppercase letterSpacing="4px">
                     Contact Us
                   </Text>
                 </Box>

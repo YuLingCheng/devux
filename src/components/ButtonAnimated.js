@@ -6,12 +6,12 @@ const ButtonAnimated = styled(Link)`
   position: relative;
   margin-bottom: 0;
   padding: 5px 0;
-  border-top: 5px solid
+  border-top: 2px solid
     ${props =>
       props.selected
         ? props.theme.colors.primaryDark
         : props.theme.colors.primaryLight};
-  border-bottom: 5px solid
+  border-bottom: 2px solid
     ${props =>
       props.selected
         ? props.theme.colors.primaryDark
@@ -31,16 +31,16 @@ const ButtonAnimated = styled(Link)`
     left: 0;
     width: 0;
     background: ${props => props.theme.colors.secondary};
-    height: 5px;
+    height: 2px;
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
   }
   &:after {
-    bottom: -5px;
+    bottom: -2px;
   }
   &:before {
-    top: -5px;
+    top: -2px;
   }
 
   &:hover:after,

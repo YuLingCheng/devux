@@ -4,7 +4,7 @@ const TextAnimated = styled.span`
   position: relative;
   padding-bottom: 5px;
   color: inherit;
-  border-bottom: 5px solid
+  border-bottom: 2px solid
     ${props =>
       props.secondary
         ? props.theme.colors.secondary
@@ -20,12 +20,12 @@ const TextAnimated = styled.span`
     position: absolute;
     right: 0;
     width: 0;
-    bottom: -5px;
+    bottom: -2px;
     background: ${props =>
       props.secondary
         ? props.theme.colors.secondaryLight
         : props.theme.colors.primaryLight};
-    height: 5px;
+    height: 2px;
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;

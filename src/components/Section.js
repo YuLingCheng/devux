@@ -8,13 +8,12 @@ import { Heading } from './Typography';
 const SectionContainer = styled.div`
   ${props => !props.fitContent && 'min-height: 100vh;'}
   min-width: 320px;
-  max-width: 1366px;
   display: flex;
   margin: auto;
   flex: 0 1 auto;
   flex-direction: column;
   justify-content: center;
-  padding: 5em 1em;
+  padding: 5em 1.5em;
   scroll-behavior: smooth;
   ${props =>
     props.invertedColors &&

@@ -9,20 +9,19 @@ const LinkAnimated = styled(Link)`
   color: inherit;
   ${props =>
     props.selected &&
-    `border-bottom:  5px solid ${props.theme.colors.primaryLight}`};
+    `border-bottom:  2px solid ${props.theme.colors.primaryLight}`};
   transition: 0.4s;
   cursor: pointer;
   ${props => props.uppercase && `text-transform: uppercase;`}
-  line-height: 3rem;
 
   &:after {
     content: '';
     position: absolute;
     right: 0;
     width: 0;
-    bottom: -5px;
+    bottom: -2px;
     background: ${props => props.theme.colors.secondary};
-    height: 5px;
+    height: 2px;
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;

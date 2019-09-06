@@ -6,19 +6,8 @@ import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import markdownRenderer from '../components/MarkdownRenderer';
 import { Markdown, Text, AnimatedSpan } from '../components/Typography';
-import Triangle from '../components/Triangle';
 
-const Background = () => (
-  <div>
-    <Triangle
-      color="primaryText"
-      height={['0vh', '3vh']}
-      width={['100vw', '100vw']}
-      invertX
-      invertY
-    />
-  </div>
-);
+const Background = () => <div />;
 
 const Title = () => (
   <Text as="span">

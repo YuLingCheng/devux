@@ -8,21 +8,16 @@ import Triangle from '../components/Triangle';
 const Background = () => (
   <div>
     <Triangle
-      color="primaryText"
-      height={['0vh', '4vh']}
-      width={['100vw', '100vw']}
-    />
-    <Triangle
       color="secondary"
       height={['10vh', '10vh']}
-      width={['80vw', '80vw']}
+      width={['80vw', '60vw']}
       invertX
       invertY
     />
     <Triangle
       color="primary"
       height={['7vh', '7vh']}
-      width={['60vw', '60vw']}
+      width={['60vw', '40vw']}
       invertX
       invertY
     />

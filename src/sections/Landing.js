@@ -20,7 +20,7 @@ const LandingPage = () => (
         lineHeight={2}
         letterSpacing="1px"
         fontWeight="500"
-        ml={3}
+        ml={[0, 0, 3]}
       >
         A culture of collaboration between{' '}
         <AnimatedSpan>designers</AnimatedSpan> and{' '}

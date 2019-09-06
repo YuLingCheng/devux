@@ -142,7 +142,7 @@ const Header = ({ currentPath }) => (
         flexWrap="wrap"
         justifyContent="space-between"
         alignItems="center"
-        py={4}
+        py={['1.3em', '32px']}
         px={['1.5em', '40px']}
         backgroundColor="background"
       >

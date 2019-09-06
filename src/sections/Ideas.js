@@ -1,45 +1,27 @@
 import React from 'react';
-import { Box, Flex, Image, Text } from 'rebass';
+import { Box, Flex } from 'rebass';
 import { StaticQuery, graphql } from 'gatsby';
-import ReactMarkdown from 'react-markdown';
-import Fade from 'react-reveal/Fade';
+import Reveal from 'react-reveal/Reveal';
 import Section from '../components/Section';
-import ButtonAnimated from '../components/ButtonAnimated';
-import Triangle from '../components/Triangle';
+import SocialLink from '../components/SocialLink';
 import markdownRenderer from '../components/MarkdownRenderer';
+import { Markdown, Text, AnimatedSpan } from '../components/Typography';
 
-const Background = () => (
-  <div>
-    <Triangle
-      color="secondaryLight"
-      height={['50vh', '20vh']}
-      width={['100vw', '50vw']}
-      invertY
-    />
+const Background = () => <div />;
 
-    <Triangle
-      color="primary"
-      height={['80vh', '10vh']}
-      width={['45vw', '100vw']}
-      invertX
-    />
-
-    <Triangle
-      color="secondaryDark"
-      height={['25vh', '20vh']}
-      width={['100vw', '100vw']}
-    />
-  </div>
+const Title = () => (
+  <Text as="span">
+    Anyone can spark <AnimatedSpan>Dev</AnimatedSpan>
+    <AnimatedSpan invert>Ux</AnimatedSpan> culture in their team
+  </Text>
 );
 
 const Ideas = () => (
-  <Section.Container id="spark" Background={Background}>
-    <Box width={1} px={[1, 2, 6]} py={[0, 1, 5]}>
-      <Section.Header
-        name="Anyone can spark DevUx culture in their team"
-        icon="🌟"
-        label="star"
-      />
+  <Section.Container id="spark" Background={Background} fitContent>
+    <Box width={[1, 1, 0.64]} margin="auto">
+      <Section.Header>
+        <Title />
+      </Section.Header>
       <StaticQuery
         query={graphql`
           query IdeasQuery {
@@ -68,51 +50,47 @@ const Ideas = () => (
           const { ideas } = data.contentfulAbout;
 
           return (
-            <Flex justifyContent="flex-start" flexDirection="column">
-              {ideas.map(({ id, ...rest }, index) => (
-                <Box
-                  key={id}
-                  px={[1, 2, 4]}
-                  width={1}
-                  alignSelf={index % 2 === 0 ? 'flex-start' : 'flex-end'}
-                  mb={[2, 3, 4]}
-                >
-                  <Fade left={index % 2 === 0} right={index % 2 !== 0}>
+            <Flex
+              justifyContent="flex-start"
+              flexDirection="column"
+              mt={[4, 4, 5]}
+            >
+              {ideas.map(({ id, ...rest }) => (
+                <Box key={id} width={1} mb={[3, 4, 4]}>
+                  <Reveal effect="fadeInUp">
                     <Flex
-                      flexDirection={index % 2 === 0 ? 'row' : 'row-reverse'}
+                      flexDirection="row"
                       justifyContent="space-between"
-                      alignItems="center"
+                      alignItems="flex-start"
                       flexWrap="wrap"
                     >
-                      <Flex flexDirection="column" width={[1, 1, 0.55]}>
-                        <Text as="h3" mb={0}>
+                      <Flex flexDirection="column" width={[1, 1, 0.32]}>
+                        <Text as="h3" mb={[0, 0, 0]} mt={0} lineHeight={1.6}>
                           {rest.title}
                         </Text>
-                        <ReactMarkdown
+                      </Flex>
+                      <Box
+                        width={[1, 1, 0.66]}
+                        my={[3, 3, 0]}
+                        textAlign="center"
+                      >
+                        <Markdown
                           source={
                             rest.description.childMarkdownRemark.rawMarkdownBody
                           }
                           renderers={markdownRenderer}
                         />
-                        <Box mt={[1, 2, 4]}>
-                          <ButtonAnimated to={rest.internalLink} bg="secondary">
-                            {rest.cta}
-                          </ButtonAnimated>
-                        </Box>
-                      </Flex>
-                      <Text
-                        width={[0.4, 0.4, 0.45]}
-                        mt={[5, 5, 0]}
-                        textAlign="center"
-                      >
-                        <Image
-                          width={350}
-                          src={rest.illustration.image.src}
-                          alt={rest.illustration.title}
-                        />
-                      </Text>
+                        <Text mt={[-2, -2, -3]}>
+                          <SocialLink
+                            url={rest.internalLink}
+                            fontAwesomeIcon="book"
+                            name="Read More"
+                            large
+                          />
+                        </Text>
+                      </Box>
                     </Flex>
-                  </Fade>
+                  </Reveal>
                 </Box>
               ))}
             </Flex>

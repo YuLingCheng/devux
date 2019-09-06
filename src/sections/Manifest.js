@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Flex, Text } from 'rebass';
+import { Box, Flex } from 'rebass';
 import { StaticQuery, graphql } from 'gatsby';
-import ReactMarkdown from 'react-markdown';
 import { Card } from '../components/Card';
 import Section from '../components/Section';
+import { Heading, Markdown } from '../components/Typography';
 import Triangle from '../components/Triangle';
 import TextAnimated from '../components/TextAnimated';
 import markdownRenderer from '../components/MarkdownRenderer';
@@ -11,30 +11,21 @@ import markdownRenderer from '../components/MarkdownRenderer';
 const Background = () => (
   <div>
     <Triangle
-      color="primaryDark"
-      height={['30vh', '50vh']}
-      width={['45vw', '60vw']}
-      invertX
-    />
-    <Triangle
-      color="secondaryLight"
-      height={['35vh', '20vh']}
-      width={['95vw', '70vw']}
-    />
-    <Triangle
       color="secondary"
-      height={['25vh', '30vh']}
-      width={['100vw', '30vw']}
-    />
-    <Triangle
-      color="primaryLight"
-      height={['25vh', '10vh']}
-      width={['75vw', '60vw']}
+      height={['10vh', '10vh']}
+      width={['80vw', '80vw']}
       invertX
       invertY
     />
     <Triangle
-      color="primaryDark"
+      color="primary"
+      height={['7vh', '7vh']}
+      width={['60vw', '60vw']}
+      invertX
+      invertY
+    />
+    <Triangle
+      color="primaryText"
       height={['0vh', '10vh']}
       width={['100vw', '100vw']}
       invertY
@@ -103,16 +94,32 @@ const Manifest = () => (
 
           return (
             <>
-              <Text as="h1">
-                <TextAnimated>{pageTitle}</TextAnimated>
-              </Text>
+              <Heading
+                as="h1"
+                uppercase
+                lineHeight={2}
+                fontWeight="500"
+                letterSpacing="6px"
+                fontSize={[3, 4, 5]}
+                mb={3}
+              >
+                {pageTitle}
+              </Heading>
               {content.map(({ id, ...rest }) => (
                 <Box key={id} mb={[2, 3, 4]} id={rest.anchor}>
-                  <Text as="h2" mb={[2, 3, 4]}>
+                  <Heading
+                    as="h2"
+                    mb={[2, 2, 3]}
+                    uppercase
+                    lineHeight={2}
+                    fontSize={[2, 3, 3]}
+                    fontWeight="500"
+                    letterSpacing="6px"
+                  >
                     <TextAnimated>{rest.title}</TextAnimated>
-                  </Text>
+                  </Heading>
                   <Box key={id} px={[2, 3, 4]}>
-                    <ReactMarkdown
+                    <Markdown
                       source={
                         rest.childContentfulRichContentContentTextNode
                           .childMarkdownRemark.rawMarkdownBody
@@ -125,13 +132,21 @@ const Manifest = () => (
               <Box mb={[2, 3, 4]}>
                 {levels.map(({ id, ...rest }) => (
                   <Box key={id} mb={[2, 3, 4]} id={`level-${rest.number}`}>
-                    <Text as="h3">
-                      <TextAnimated>{`${rest.label} ${rest.number} - ${
-                        rest.name
-                      }`}</TextAnimated>
-                    </Text>
+                    <Heading
+                      as="h3"
+                      uppercase
+                      mb={[2, 2, 3]}
+                      lineHeight={2}
+                      fontWeight="500"
+                      fontSize={2}
+                      letterSpacing="4px"
+                    >
+                      <TextAnimated
+                        secondary
+                      >{`${rest.label} ${rest.number} - ${rest.name}`}</TextAnimated>
+                    </Heading>
                     <Box px={[2, 3, 4]}>
-                      <ReactMarkdown
+                      <Markdown
                         source={
                           rest.childContentfulDevUxLevelDescTextNode
                             .childMarkdownRemark.rawMarkdownBody
@@ -147,10 +162,16 @@ const Manifest = () => (
                               p={3}
                               mb={[2, 2, 0]}
                             >
-                              <Text as="h4">
-                                <TextAnimated>{level.type}</TextAnimated>
-                              </Text>
-                              <ReactMarkdown
+                              <Heading
+                                as="h4"
+                                fontSize={1}
+                                letterSpacing="4px"
+                                uppercase
+                                mb={3}
+                              >
+                                {level.type}
+                              </Heading>
+                              <Markdown
                                 source={
                                   level.desc.childMarkdownRemark.rawMarkdownBody
                                 }
@@ -166,11 +187,19 @@ const Manifest = () => (
               </Box>
               {conclusion.map(({ id, ...rest }) => (
                 <Box key={id} mt={[3, 4, 5]} id={rest.anchor}>
-                  <Text as="h2" mb={[2, 3, 4]}>
+                  <Heading
+                    as="h2"
+                    mb={[2, 2, 3]}
+                    uppercase
+                    lineHeight={2}
+                    fontSize={[2, 3, 3]}
+                    fontWeight="500"
+                    letterSpacing="6px"
+                  >
                     <TextAnimated>{rest.title}</TextAnimated>
-                  </Text>
+                  </Heading>
                   <Box key={id} px={[2, 3, 4]}>
-                    <ReactMarkdown
+                    <Markdown
                       source={
                         rest.childContentfulRichContentContentTextNode
                           .childMarkdownRemark.rawMarkdownBody

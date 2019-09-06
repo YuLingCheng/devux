@@ -6,20 +6,20 @@ const ButtonAnimated = styled(Link)`
   position: relative;
   margin-bottom: 0;
   padding: 5px 0;
-  color: ${props => props.theme.colors.background};
-  border-top: 5px solid
+  border-top: 2px solid
     ${props =>
       props.selected
         ? props.theme.colors.primaryDark
         : props.theme.colors.primaryLight};
-  border-bottom: 5px solid
+  border-bottom: 2px solid
     ${props =>
       props.selected
         ? props.theme.colors.primaryDark
         : props.theme.colors.primaryLight};
   transition: 0.4s;
   cursor: pointer;
-  color: ${props => props.theme.colors.primary};
+  color: ${props =>
+    props.theme.colors[props.color] || props.theme.colors.primary};
   font-weight: bold;
   ${props => props.uppercase && `text-transform: uppercase;`}
   box-sizing: border-box;
@@ -31,16 +31,16 @@ const ButtonAnimated = styled(Link)`
     left: 0;
     width: 0;
     background: ${props => props.theme.colors.secondary};
-    height: 5px;
+    height: 2px;
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
   }
   &:after {
-    bottom: -5px;
+    bottom: -2px;
   }
   &:before {
-    top: -5px;
+    top: -2px;
   }
 
   &:hover:after,
@@ -48,6 +48,9 @@ const ButtonAnimated = styled(Link)`
     left: 0;
     right: auto;
     width: 100%;
+  }
+  &::selection {
+    background: ${props => props.theme.colors.secondary};
   }
 `;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex } from 'rebass';
+import { Box, Flex, Image, Text } from 'rebass';
 import { StaticQuery, graphql } from 'gatsby';
 import { Card } from '../components/Card';
 import Section from '../components/Section';
@@ -56,6 +56,14 @@ const Manifest = () => (
                 name
                 number
                 label
+                workflowExample {
+                  id
+                  title
+                  description
+                  image: resize(width: 900, quality: 100) {
+                    src
+                  }
+                }
                 childContentfulDevUxLevelDescTextNode {
                   childMarkdownRemark {
                     rawMarkdownBody
@@ -181,6 +189,30 @@ const Manifest = () => (
                           ),
                         )}
                       </Flex>
+                      {rest.workflowExample && (
+                        <Box py={(2, 3, 4)}>
+                          <Heading
+                            as="h4"
+                            uppercase
+                            mt={[1, 2, 3]}
+                            mb={[2, 2, 3]}
+                            lineHeight={2}
+                            fontWeight="500"
+                            fontSize={2}
+                            letterSpacing="4px"
+                          >
+                            {rest.workflowExample.title}
+                          </Heading>
+                          <Image
+                            my={[1, 2, 3]}
+                            src={rest.workflowExample.image.src}
+                            alt={rest.workflowExample.title}
+                          />
+                          <Text as="p" mt={0} lineHeight={2}>
+                            {rest.workflowExample.description}
+                          </Text>
+                        </Box>
+                      )}
                     </Box>
                   </Box>
                 ))}

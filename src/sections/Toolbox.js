@@ -117,8 +117,8 @@ const Toolbox = () => (
                       />
                     )}
                     {rest.images &&
-                      rest.images.map(image => (
-                        <Box key={image.id}>
+                      rest.images.map((image, index) => (
+                        <Box key={image.id} mt={index > 0 ? 4 : 0}>
                           <Image src={image.file.url} alt={image.title} />
                           <Text textAlign="center">{image.description}</Text>
                         </Box>

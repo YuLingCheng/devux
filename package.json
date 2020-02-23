@@ -6,6 +6,7 @@
   "scripts": {
     "build": "cleandir ./.cache && gatsby build",
     "develop": "cleandir ./.cache && gatsby develop -p 8009",
+    "serve": "gatsby serve -p 8009",
     "start": "yarn develop",
     "lint": "eslint ./src",
     "setup": "node ./bin/setup.js"
@@ -17,7 +18,7 @@
     "dotenv": "^8.2.0",
     "envfile": "^4.5.0",
     "gatsby": "^2.19",
-    "gatsby-plugin-google-analytics": "^2.0.13",
+    "gatsby-plugin-gdpr-cookies": "^1.0.6",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2",
     "gatsby-plugin-netlify": "^2.1.0",
@@ -29,6 +30,7 @@
     "inquirer": "^7.0.6",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
+    "react-cookie-consent": "^3.0.0",
     "react-dom": "^16.7.0",
     "react-fontawesome": "^1.6.1",
     "react-headroom": "^3.0.0",

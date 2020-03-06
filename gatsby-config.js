@@ -4,11 +4,6 @@ require('dotenv').config();
 
 const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID } = process.env;
 
-const client = contentful.createClient({
-  space: SPACE_ID,
-  accessToken: ACCESS_TOKEN,
-});
-
 const plugins = [
   'gatsby-plugin-react-helmet',
   {
@@ -28,20 +23,18 @@ const plugins = [
   'gatsby-plugin-netlify',
 ];
 
-module.exports = client.getEntries().then(() => {
-  if (ANALYTICS_ID) {
-    plugins.push({
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: ANALYTICS_ID,
-      },
-    });
-  }
-
-  return {
-    siteMetadata: {
-      isMediumUserDefined: false,
+if (ANALYTICS_ID) {
+  plugins.push({
+    resolve: 'gatsby-plugin-google-analytics',
+    options: {
+      trackingId: ANALYTICS_ID,
     },
-    plugins,
-  };
-});
+  });
+}
+
+module.exports = {
+  siteMetadata: {
+    isMediumUserDefined: false,
+  },
+  plugins,
+};

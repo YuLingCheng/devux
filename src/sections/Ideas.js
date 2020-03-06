@@ -69,11 +69,7 @@ const Ideas = () => (
                           {rest.title}
                         </Text>
                       </Flex>
-                      <Box
-                        width={[1, 1, 0.66]}
-                        my={[3, 3, 0]}
-                        textAlign="center"
-                      >
+                      <Box width={[1, 1, 0.66]} my={[3, 3, 0]} textAlign="left">
                         <Markdown
                           source={
                             rest.description.childMarkdownRemark.rawMarkdownBody

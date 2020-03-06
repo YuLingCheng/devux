@@ -21,16 +21,18 @@ const plugins = [
   'gatsby-transformer-remark',
   'gatsby-plugin-offline',
   'gatsby-plugin-netlify',
-];
-
-if (ANALYTICS_ID) {
-  plugins.push({
-    resolve: 'gatsby-plugin-google-analytics',
+  {
+    resolve: `gatsby-plugin-gdpr-cookies`,
     options: {
-      trackingId: ANALYTICS_ID,
+      googleAnalytics: {
+        trackingId: ANALYTICS_ID,
+        cookieName: 'gdpr-accepted', // default is gatsby-gdpr-google-analytics
+        anonymize: false, // default is true
+      },
+      environments: ['production'],
     },
-  });
-}
+  },
+];
 
 module.exports = {
   siteMetadata: {

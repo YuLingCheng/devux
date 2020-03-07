@@ -263,19 +263,17 @@ export default ({
               })}
           </Swipeable>
         </QuestionsWrapper>
-        {/Mobi|Android/i.test(navigator.userAgent) && (
-          <Text
-            as="p"
-            width={1}
-            style={{ order: 2 }}
-            textAlign="center"
-            fontSize={'12px'}
-            mt={-2}
-            mb={4}
-          >
-            <em>Swipe to answer</em>
-          </Text>
-        )}
+        <Text
+          as="p"
+          width={1}
+          style={{ order: 2 }}
+          textAlign="center"
+          fontSize={'12px'}
+          mt={-5}
+          mb={4}
+        >
+          <em>Swipe to answer</em>
+        </Text>
         <AnswersWrapper>
           <Answer
             color="primaryText"

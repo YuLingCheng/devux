@@ -14,6 +14,7 @@ import HomeLogo from './Logo/HomeLogo';
 const capitalize = s => s && s[0].toUpperCase() + s.slice(1);
 
 const HeaderContainer = styled(Headroom)`
+  z-index: 20;
   .headroom--pinned {
     background: ${props => props.theme.colors.background};
   }
@@ -128,6 +129,9 @@ const getNavigation = (navLinks, currentPath) => (
     {navLinks.length === 0 && <NavLink to="/#about">About</NavLink>}
     <NavLink currentPath={currentPath} to="/manifest">
       Manifest
+    </NavLink>
+    <NavLink currentPath={currentPath} to="/assess">
+      Assess
     </NavLink>
     <NavLink currentPath={currentPath} to="/toolbox">
       Toolbox

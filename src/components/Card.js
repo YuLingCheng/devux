@@ -25,7 +25,7 @@ export const Card = styled(CardRebass).attrs({
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.25s;
   top: 0;
-  height: 100%;
+  ${props => !props.initialHeight && 'height: 100%;'};
   cursor: ${props => (props.onClick ? 'pointer' : 'default')};
 
   &:hover {

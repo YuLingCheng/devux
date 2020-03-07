@@ -5,7 +5,7 @@ import Section from './Section';
 import Triangle from './Triangle';
 import QuizCards from './QuizCards';
 import QuizResult from './QuizResult';
-import { Heading } from './Typography';
+import { Heading, Text } from './Typography';
 import { mapQuestions } from '../services/quiz';
 
 const Background = () => (
@@ -32,7 +32,6 @@ const Background = () => (
     />
   </div>
 );
-
 const Quiz = () => (
   <Section.Container Background={Background}>
     <Box width={1} margin="auto" mt={[1, 4, 5]}>
@@ -48,6 +47,7 @@ const Quiz = () => (
       >
         Assess your collaboration
       </Heading>
+
       <StaticQuery
         query={graphql`
           query QuizQuery {

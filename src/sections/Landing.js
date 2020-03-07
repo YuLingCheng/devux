@@ -33,8 +33,13 @@ const LandingPage = () => (
         {({ onClick }) => <ScrollIcon onClick={onClick} />}
       </SectionLink>
       <Flex justifyContent="flex-end" width={[0.85, 0.85, 0.64]} mt={[2, 2, 4]}>
-        <Text letterSpacing="2px" fontSize={[2, 2, 2]}>
-          <LinkAnimated selected to="assess">
+        <Text
+          letterSpacing="2px"
+          fontSize={[2, 2, 2]}
+          lineHeight={2}
+          textAlign="right"
+        >
+          <LinkAnimated selected to="/assess">
             Start improving your collaboration now!
           </LinkAnimated>
         </Text>

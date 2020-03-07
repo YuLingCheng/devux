@@ -230,18 +230,6 @@ const QuizResult = ({
                   {isNewProject
                     ? 'when starting a new project.'
                     : 'to improve your collaboration.'}
-                  <br />
-                  Checkout the{' '}
-                  <LinkAnimated
-                    as="a"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`toolbox`}
-                    selected
-                  >
-                    Toolbox
-                  </LinkAnimated>{' '}
-                  for practical examples of what you could do.
                 </Text>
                 {isNewProject && (
                   <>
@@ -346,6 +334,25 @@ const QuizResult = ({
                   textAlign="center"
                   letterSpacing="1px"
                   mt={[3, 3, 4]}
+                  mb={[2, 2, 3]}
+                  lineHeight={2}
+                >
+                  Checkout the{' '}
+                  <LinkAnimated
+                    as="a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`toolbox`}
+                    selected
+                    uppercase
+                  >
+                    Toolbox
+                  </LinkAnimated>{' '}
+                  for practical examples of what you could do.
+                </Text>
+                <Text
+                  textAlign="center"
+                  letterSpacing="1px"
                   mb={[3, 3, 4]}
                   lineHeight={2}
                 >
@@ -356,6 +363,7 @@ const QuizResult = ({
                     rel="noopener noreferrer"
                     href={`manifest`}
                     selected
+                    uppercase
                   >
                     Manifest
                   </LinkAnimated>

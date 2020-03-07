@@ -83,6 +83,7 @@ const About = () => (
                     uppercase
                     letterSpacing="1px"
                     mb="3"
+                    lineHeight={2}
                   >
                     <LinkAnimated
                       as="a"
@@ -99,11 +100,12 @@ const About = () => (
                       width: '100%',
                       height: '100%',
                       minHeight: '210px',
+                      maxHeight: '260px',
                     }}
                     src="https://www.youtube.com/embed/uWIfnPc1wC0?start=1"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </Box>
                 <Box mt={3} mb={5} width={[1, 1, 0.45]}>
@@ -113,9 +115,11 @@ const About = () => (
                     uppercase
                     letterSpacing="1px"
                     mb="3"
+                    lineHeight={2}
                   >
                     <LinkAnimated
                       as="a"
+                      lineHeight={2}
                       selected
                       target="_blank"
                       rel="noopener noreferrer"
@@ -129,11 +133,12 @@ const About = () => (
                       width: '100%',
                       height: '100%',
                       minHeight: '210px',
+                      maxHeight: '260px',
                     }}
                     src="https://www.youtube.com/embed/GeZxuhnRhSY?start=1"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </Box>
                 <Box mt={3} mb={5} width={[1, 0.45, 0.45]}>
@@ -143,6 +148,7 @@ const About = () => (
                     uppercase
                     letterSpacing="1px"
                     mb="3"
+                    lineHeight={2}
                   >
                     <LinkAnimated
                       as="a"
@@ -161,9 +167,9 @@ const About = () => (
                       maxHeight: '220px',
                     }}
                     src="https://www.youtube.com/embed/PByOCtKdJhM?start=1"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </Box>
                 <Box mt={3} mb={5} width={[1, 0.45, 0.3]}>
@@ -173,6 +179,7 @@ const About = () => (
                     uppercase
                     letterSpacing="1px"
                     mb="3"
+                    lineHeight={2}
                   >
                     <LinkAnimated
                       as="a"

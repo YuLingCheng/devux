@@ -3,7 +3,8 @@ import { SectionLink } from 'react-scroll-section';
 import { Flex } from 'rebass';
 import ScrollIcon from '../components/ScrollIcon';
 import Section from '../components/Section';
-import { Heading, AnimatedSpan } from '../components/Typography';
+import LinkAnimated from '../components/LinkAnimated';
+import { Heading, AnimatedSpan, Text } from '../components/Typography';
 
 const Background = () => <div />;
 
@@ -31,6 +32,13 @@ const LandingPage = () => (
       <SectionLink section="spark">
         {({ onClick }) => <ScrollIcon onClick={onClick} />}
       </SectionLink>
+      <Flex justifyContent="flex-end" width={[0.85, 0.85, 0.64]} mt={[2, 2, 4]}>
+        <Text letterSpacing="2px" fontSize={[2, 2, 2]}>
+          <LinkAnimated selected to="assess">
+            Start improving your collaboration now!
+          </LinkAnimated>
+        </Text>
+      </Flex>
     </Flex>
   </Section.Container>
 );

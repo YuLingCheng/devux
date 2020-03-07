@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import Triangle from '../components/Triangle';
+import { Text } from '../components/Typography';
 
 const Background = () => (
   <div>

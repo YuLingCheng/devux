@@ -108,13 +108,25 @@ const QuizResult = ({
             <Box mb={[3, 3, 5]}>
               <Heading
                 as="h2"
-                mb={[2, 2, 4]}
+                mb={[2, 2, 3]}
                 textAlign="center"
                 uppercase
                 letterSpacing="4px"
               >
                 Current level
               </Heading>
+              <Text
+                mb={[2, 2, 4]}
+                margin="auto"
+                width={[1, 0.75, 0.5]}
+                textAlign="center"
+                letterSpacing="1px"
+                lineHeight={1.5}
+              >
+                This is where you are now as a team and the maturity level of
+                your collaboration on each step of the production flow : product
+                definition, design, development.
+              </Text>
               <Flex justifyContent="space-evenly" flexWrap="wrap">
                 {Object.keys(currentLevelCharGroups).map(type => (
                   <Flex
@@ -156,7 +168,7 @@ const QuizResult = ({
                                 uppercase
                                 mb={[2, 2, 3]}
                               >
-                                {level > 0 ? '✅' : '🚦'} {type} level {level}
+                                {level > 0 ? '✅' : '🚦'} {type}: level {level}
                               </Heading>
                               <Markdown
                                 source={text}
@@ -224,7 +236,7 @@ const QuizResult = ({
                   textAlign="center"
                   letterSpacing="1px"
                   mb={[3, 3, 4]}
-                  lineHeight={2}
+                  lineHeight={1.5}
                 >
                   Here is what you should focus on{' '}
                   {isNewProject

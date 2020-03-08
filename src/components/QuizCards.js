@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Swipeable } from 'react-swipeable';
 import styled, { css } from 'styled-components';
-import { Text } from '../components/Typography';
+import { Text, Markdown } from '../components/Typography';
 import ButtonAnimated from '../components/ButtonAnimated';
 import LinkAnimated from '../components/LinkAnimated';
+import markdownRenderer, {
+  MarkdownParagraph,
+} from '../components/MarkdownRenderer';
 
 const QuizContainer = styled.div`
   display: flex;
@@ -79,6 +82,12 @@ const QuestionContainer = styled.div`
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  ${MarkdownParagraph} {
+    letter-spacing: 2px;
+    line-height: 1.6;
+    margin: 0;
+  }
 `;
 
 const Answer = styled(ButtonAnimated)`
@@ -249,15 +258,10 @@ export default ({
                         : questionsLength - index,
                     }}
                   >
-                    <Text
-                      as="h3"
-                      fontSize={[2, 3, 3]}
-                      lineHeight={2}
-                      letterSpacing="1px"
-                      fontWeight="500"
-                    >
-                      {question.question}
-                    </Text>
+                    <Markdown
+                      source={question.question}
+                      renderers={markdownRenderer}
+                    />
                   </QuestionContainer>
                 );
               })}

@@ -179,6 +179,9 @@ export default ({
       deltaX, // x offset (initial.x - current.x)
       deltaY, // y offset (initial.y - current.y)
     }) => {
+      if (deltaY > 35 || deltaY < -35 || deltaX > 120 || deltaX < -120) {
+        return;
+      }
       setAnimationDeltaX(-1 * deltaX);
       setAnimationDeltaY(-1 * deltaY);
     },

@@ -1,3 +1,3 @@
-import AssessPage from '../pages/Assess';
+import AssessPage from '../pages/assess';
 
 export default AssessPage;

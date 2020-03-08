@@ -39,8 +39,8 @@ const LandingPage = () => (
           lineHeight={2}
           textAlign="right"
         >
-          <LinkAnimated selected to="/assess">
-            Start improving your collaboration now!
+          <LinkAnimated selected to="/getting-started">
+            Let's get started!
           </LinkAnimated>
         </Text>
       </Flex>

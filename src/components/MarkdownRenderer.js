@@ -34,7 +34,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const MarkdownParagraph = styled.p`
+export const MarkdownParagraph = styled.p`
   line-height: 2em;
 
   > img {
@@ -78,6 +78,15 @@ const MarkdownLink = ({ href, children }) => {
   );
 };
 
+const MarkdownQuote = styled.div`
+  font-size: 14px;
+  text-align: left;
+  > p${MarkdownParagraph} {
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+`;
+
 MarkdownLink.propTypes = {
   href: PropTypes.string.isRequired,
   children: PropTypes.node,
@@ -88,4 +97,5 @@ export default {
   list: props => <MarkdownList {...props} />,
   listItem: props => <MarkdownListItem {...props} />,
   link: MarkdownLink,
+  blockquote: props => <MarkdownQuote {...props} />,
 };

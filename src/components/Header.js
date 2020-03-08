@@ -130,8 +130,8 @@ const getNavigation = (navLinks, currentPath) => (
     <NavLink currentPath={currentPath} to="/manifest">
       Manifest
     </NavLink>
-    <NavLink currentPath={currentPath} to="/assess">
-      Assess
+    <NavLink currentPath={currentPath} to="/getting-started">
+      Get started
     </NavLink>
     <NavLink currentPath={currentPath} to="/toolbox">
       Toolbox

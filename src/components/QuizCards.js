@@ -307,7 +307,7 @@ export default ({
         mb={[3, 3, 4]}
         lineHeight={2}
       >
-        Want to lean more ? Read our{' '}
+        Want to learn more ? Read our{' '}
         <LinkAnimated
           as="a"
           target="_blank"
